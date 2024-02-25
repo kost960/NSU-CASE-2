@@ -1,0 +1,5 @@
+SUMM_INPUT = 'Enter loan amount'
+PERCENT_INPUT = 'Enter interest rate'
+PERIOD_INPUT = 'Enter the loan term (in years)'
+PAYMENT_PRINT = 'Payment'
+TOTAL_LOAN_AMOUNT = 'The total loan amount will be'

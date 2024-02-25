@@ -2,7 +2,7 @@ import ru_local as ru
 import en_local as en
 
 
-class BankInterest():
+class СreditСalculator():
     def __init__(self, summ, percent, period):
         self.summ = summ
         self.period = period
@@ -31,19 +31,19 @@ if __name__ == '__main__':
         percent = int(input(f'{ru.PERCENT_INPUT}: '))
         period = int(input(f'{ru.PERIOD_INPUT}: '))
 
-        credit = BankInterest(summ, percent, period)
+        credit = СreditСalculator(summ, percent, period)
         diff = credit.diff_int()
         for month, pay in enumerate(diff):
             print(f'{ru.PAYMENT_PRINT} {month + 1}: {pay: .2f}.')
-        print(round(sum(diff), 2))
+        print(f'{ru.TOTAL_LOAN_AMOUNT}:', round(sum(diff), 2))
 
     if lang == 'en':
         summ = int(input(f'{en.SUMM_INPUT}: '))
         percent = int(input(f'{en.PERCENT_INPUT}: '))
         period = int(input(f'{en.PERIOD_INPUT}: '))
 
-        credit = BankInterest(summ, percent, period)
+        credit = СreditСalculator(summ, percent, period)
         diff = credit.diff_int()
         for month, pay in enumerate(diff):
             print(f'{ru.PAYMENT_PRINT} {month + 1}: {pay: .2f}.')
-        print(round(sum(diff), 2))
+        print(f'{en.TOTAL_LOAN_AMOUNT}:', round(sum(diff), 2))
