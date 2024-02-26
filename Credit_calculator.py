@@ -1,3 +1,8 @@
+# Part of case-study #2: Credit Calculator
+# Developer: Kolchik K.
+#
+
+
 import ru_local as ru
 import en_local as en
 
@@ -7,6 +12,11 @@ class СreditСalculator():
         self.summ = summ
         self.period = period
         self.percent = percent
+
+    '''
+        Main function.
+        :return: The function returns an array with monthly payments
+        '''
 
     def diff_int(self):
         payments = []
