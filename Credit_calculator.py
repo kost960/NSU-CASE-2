@@ -13,12 +13,11 @@ class СreditСalculator():
         self.period = period
         self.percent = percent
 
-    '''
+    def diff_int(self):
+        '''
         Main function.
         :return: The function returns an array with monthly payments
         '''
-
-    def diff_int(self):
         payments = []
         months = self.period * 12
         rest = self.summ
