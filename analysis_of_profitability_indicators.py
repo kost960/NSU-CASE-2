@@ -4,7 +4,7 @@
 #
 
 
-lang = input('Choose language(ru/en): ')
+lang = input('Choose language(ru/en): \n')
 
 if lang != 'ru' and lang != 'en':
     print("Wrong language!!!")
@@ -22,6 +22,7 @@ if lang == 'ru':
     output_total_cost = ru.TOTAL_COST
     output_profit = ru.PROFIT
     output_profitability = ru.PROFITABILITY
+    break_word = ru.WORD_BREAK
 
 if lang == 'en':
     input_revenue = en.REVENUE_INPUT
@@ -31,16 +32,25 @@ if lang == 'en':
     output_total_cost = en.TOTAL_COST
     output_profit = en.PROFIT
     output_profitability = en.PROFITABILITY
+    break_word = en.WORD_BREAK
 
+
+    '''
+       Main function.
+       :return: None
+       '''
 
 def work_with_indicators():
+
+
+
     revenue = float(input(f'{input_revenue}: \n'))
     cost = {}
     while True:
         type_cost = input(f'{input_cost}: \n')
-        if type_cost.lower() == 'done' or 'готово':
+        if type_cost.lower() == f'{break_word}':
             break
-        amount = float(input(f'{input_amount} {type_cost}: \n'))
+        amount = float(input(f'{input_amount}{type_cost}: \n'))
         cost[type_cost] = amount
     total_cost = sum(cost.values())
     profit = revenue - total_cost
