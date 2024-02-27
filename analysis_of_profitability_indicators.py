@@ -1,4 +1,9 @@
 
+# Part of case-study #2: Profitability Indicators
+# Developer: Malcev A.
+#
+
+
 lang = input('Choose language(ru/en): ')
 
 if lang != 'ru' and lang != 'en':
