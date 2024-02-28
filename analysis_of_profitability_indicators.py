@@ -1,4 +1,3 @@
-
 # Part of case-study #2: Profitability Indicators
 # Developer: Malcev A.
 #
@@ -9,10 +8,8 @@ lang = input('Choose language(ru/en): \n')
 if lang != 'ru' and lang != 'en':
     print("Wrong language!!!")
 
-
 import ru_local as ru
 import en_local as en
-
 
 if lang == 'ru':
     input_revenue = ru.REVENUE_INPUT
@@ -34,16 +31,13 @@ if lang == 'en':
     output_profitability = en.PROFITABILITY
     break_word = en.WORD_BREAK
 
-
     '''
-       Main function.
-       :return: None
-       '''
+   Main function.
+   :return: None
+   '''
+
 
 def work_with_indicators():
-
-
-
     revenue = float(input(f'{input_revenue}: \n'))
     cost = {}
     while True:
@@ -54,10 +48,9 @@ def work_with_indicators():
         cost[type_cost] = amount
     total_cost = sum(cost.values())
     profit = revenue - total_cost
-    profitability = (profit/total_cost)
-    print(f'{output_revenue} = {revenue}\n {output_total_cost} = {total_cost}\n {output_profit} = {profit}\n {output_profitability} = {profitability:.0%}')
+    profitability = (profit / total_cost)
+    print(
+        f'{output_revenue} = {revenue}\n {output_total_cost} = {total_cost}\n {output_profit} = {profit}\n {output_profitability} = {profitability:.0%}')
 
 
 work_with_indicators()
-
-
